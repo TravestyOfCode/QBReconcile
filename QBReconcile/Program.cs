@@ -14,6 +14,8 @@ namespace QBReconcile
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            builder.Services.AddTransient<QBConnection>();
+
             builder.Services.Configure<QBSDKOptions>(builder.Configuration.GetSection(QBSDKOptions.Name));
 
             var app = builder.Build();
