@@ -1,0 +1,27 @@
+﻿@model List<QBReconcile.Models.QBTransaction>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>TxnType</th>
+            <th>Date</th>
+            <th>Num</th>
+            <th>Name</th>
+            <th>Clr</th>
+            <th>Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var txn in Model ?? [])
+        {
+            <tr>
+                <td>@txn.Type</td>
+                <td>@txn.Date?.ToString("yyyy-MM-dd")</td>
+                <td>@txn.Num</td>
+                <td>@txn.Name</td>
+                <td>@txn.Clr</td>
+                <td>@txn.Amount?.ToString("F2")</td>
+            </tr>
+        }
+    </tbody>
+</table>
