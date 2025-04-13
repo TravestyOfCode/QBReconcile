@@ -4,7 +4,7 @@
     ViewData["Title"] = "Reconcile";
 }
 
-<form>
+<form id="form">
     <div class="row">
         <label class="form-label col-2">Account</label>
         <label class="form-label col-10">WebConnect File (.qbo)</label>
@@ -24,7 +24,7 @@
     </div>
     <div class="row justify-content-end mb-2">
         <div class="col-2">
-            <button type="button" class="btn btn-primary" hx-get="/reconcile/process" hx-target="#transactions">Process</button>
+            <button type="button" class="btn btn-primary" hx-get="/reconcile/process" hx-target="#transactions" hx-include="#form">Process</button>
         </div>
     </div>    
 </form>
