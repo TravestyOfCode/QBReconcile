@@ -19,12 +19,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="SimpleResults">
+      <HintPath>..\..\SimpleResults\SimpleResults\bin\Debug\net8.0\SimpleResults.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
 	  <Using Include="System" />
 	  <Using Include="System.Collections.Generic" />
 	  <Using Include="System.Linq" />
 	  <Using Include="System.Threading" />
 	  <Using Include="System.Threading.Tasks" />
 	  <Using Include="Microsoft.Extensions.Logging" />
+	  <Using Include="SimpleResults" />
   </ItemGroup>
 
 </Project>
