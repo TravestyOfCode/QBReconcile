@@ -1,0 +1,34 @@
+﻿@model List<string>
+
+@{
+    ViewData["Title"] = "Reconcile";
+}
+
+<form>
+    <div class="row">
+        <label class="form-label col-2">Account</label>
+        <label class="form-label col-10">WebConnect File (.qbo)</label>
+    </div>
+    <div class="row mb-2">
+        <div class="col-2">
+            <select class="form-select" name="account">
+                @foreach (var account in Model ?? [])
+                {
+                    <option value="@account">@account</option>
+                }
+            </select>
+        </div>
+        <div class="col-10">
+            <input class="form-control" type="file" accept=".qbo" name="qboFile" />
+        </div>
+    </div>
+    <div class="row justify-content-end mb-2">
+        <div class="col-2">
+            <button type="button" class="btn btn-primary" hx-get="/reconcile/process" hx-target="#transactions">Process</button>
+        </div>
+    </div>    
+</form>
+
+<div id="transactions">
+    
+</div>
