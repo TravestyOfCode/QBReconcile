@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using QBReconcile.Data;
 
 namespace QBReconcile
 {
@@ -12,6 +13,8 @@ namespace QBReconcile
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.Configure<QBSDKOptions>(builder.Configuration.GetSection(QBSDKOptions.Name));
 
             var app = builder.Build();
 
