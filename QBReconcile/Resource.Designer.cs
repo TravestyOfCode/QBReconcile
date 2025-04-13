@@ -68,5 +68,14 @@ namespace QBReconcile {
                 return ResourceManager.GetString("ReconcilableAccountQuery", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;&lt;?qbxml version=&quot;13.0&quot; ?&gt;&lt;QBXML&gt;&lt;QBXMLMsgsRq onError=&quot;stopOnError&quot;&gt;&lt;CustomDetailReportQueryRq&gt;&lt;CustomDetailReportType&gt;CustomTxnDetail&lt;/CustomDetailReportType&gt;&lt;ReportPeriod&gt;&lt;FromReportDate&gt;@@FromDate&lt;/FromReportDate&gt;&lt;ToReportDate&gt;@@ToDate&lt;/ToReportDate&gt;&lt;/ReportPeriod&gt;&lt;ReportAccountFilter&gt;&lt;FullName&gt;@@Account&lt;/FullName&gt;&lt;/ReportAccountFilter&gt;&lt;ReportDetailLevelFilter&gt;SummaryOnly&lt;/ReportDetailLevelFilter&gt;&lt;ReportPostingStatusFilter&gt;Posting&lt;/ReportPostingStatusFilter&gt;&lt;Summariz [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string UnclearedTransactionQuery {
+            get {
+                return ResourceManager.GetString("UnclearedTransactionQuery", resourceCulture);
+            }
+        }
     }
 }
