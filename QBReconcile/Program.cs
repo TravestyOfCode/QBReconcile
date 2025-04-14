@@ -18,6 +18,8 @@ namespace QBReconcile
 
             builder.Services.Configure<QBSDKOptions>(builder.Configuration.GetSection(QBSDKOptions.Name));
 
+            builder.Services.AddMediatR(c => c.RegisterServicesFromAssembly(System.Reflection.Assembly.GetExecutingAssembly()));
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
