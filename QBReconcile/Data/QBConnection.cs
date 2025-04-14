@@ -1,9 +1,8 @@
 ﻿using Microsoft.Extensions.Options;
-using QBReconcile.Data;
 using QBReconcile.Services;
 using QBXMLRP2Lib;
 
-namespace QBReconcile;
+namespace QBReconcile.Data;
 
 /// <summary>
 /// A class that allows a connection to QuickBooks using the QBSDK to process
